@@ -1,4 +1,4 @@
-# Crownfield Eye Hospital — ophthalmology database
+# Crownfield Eye Hospital, ophthalmology database
 
 This is my individual repository for the Crownfield Eye Hospital assignment.
 
