@@ -1,5 +1,5 @@
 -- ---------------------------------------------------------------------
--- 02_individual_queries.sql — my Queries 1 to 4.
+-- 02_individual_queries.sql: my Queries 1 to 4.
 -- Run after 01_schema.sql. Each one says what question it answers.
 -- ---------------------------------------------------------------------
 USE CrownfieldEyeHospitalDB;

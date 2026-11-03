@@ -1,5 +1,5 @@
 -- ---------------------------------------------------------------------
--- 03_procedure_and_trigger.sql — my Queries 5 and 6.
+-- 03_procedure_and_trigger.sql: my Queries 5 and 6.
 -- Run after 01_schema.sql and 02_individual_queries.sql.
 --
 -- The trigger is created here, not in file 01, so that the Appendix 1
@@ -22,8 +22,8 @@ END //
 DELIMITER ;
 
 -- Execute:
-CALL GetPatientAppointments(1);   -- Amina Yusuf (OP001) — two appointments
-CALL GetPatientAppointments(9);   -- Priya Sharma — one appointment
+CALL GetPatientAppointments(1);   -- Amina Yusuf (OP001), two appointments
+CALL GetPatientAppointments(9);   -- Priya Sharma, one appointment
 
 -- Q6: TRIGGER enforcing a meaningful business rule
 -- Question: Prevent appointment dates being inserted in the past.
@@ -45,6 +45,6 @@ DELIMITER ;
 -- INSERT INTO Appointment (PatientID, ClinicianID, ClinicID, AppointmentDate)
 -- VALUES (1, 1, 1, '2020-01-01 09:00:00');
 
--- Test 2 (should SUCCEED — future date):
+-- Test 2 (should SUCCEED, future date):
 INSERT INTO Appointment (PatientID, ClinicianID, ClinicID, AppointmentDate, Status)
 VALUES (9, 1, 1, DATE_ADD(NOW(), INTERVAL 7 DAY), 'Scheduled');

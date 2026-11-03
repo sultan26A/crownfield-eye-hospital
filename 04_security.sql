@@ -1,5 +1,5 @@
 -- ---------------------------------------------------------------------
--- 04_security.sql — roles and privileges, password hashing, secure coding
+-- 04_security.sql: roles and privileges, password hashing, secure coding
 -- and transactions.
 --
 -- Run this as an admin user. The passwords in here are obvious demo ones,
@@ -26,7 +26,7 @@ GRANT ALL PRIVILEGES ON CrownfieldEyeHospitalDB.* TO admin_user@localhost;
 GRANT SELECT                 ON CrownfieldEyeHospitalDB.Patient     TO doctor_user@localhost;
 GRANT SELECT, INSERT, UPDATE ON CrownfieldEyeHospitalDB.Appointment TO doctor_user@localhost;
 
--- Receptionist: booking focus — read/insert/update patient & appointment only
+-- Receptionist: booking focus, read/insert/update patient & appointment only
 GRANT SELECT, INSERT, UPDATE ON CrownfieldEyeHospitalDB.Patient     TO reception_user@localhost;
 GRANT SELECT, INSERT, UPDATE ON CrownfieldEyeHospitalDB.Appointment TO reception_user@localhost;
 
@@ -46,7 +46,7 @@ GRANT SELECT ON CrownfieldEyeHospitalDB.PatientOwnRecords TO amina_yusuf@localho
 
 FLUSH PRIVILEGES;
 
--- ---------------- D2: Data protection — password hashing (SHA-256) ----------------
+-- ---------------- D2: Data protection and password hashing (SHA-256) ----------------
 -- The plaintext password is never stored, only the hash, and a hash can't be
 -- turned back into the original password.
 INSERT INTO PatientLogin (PatientID, Username, PasswordHash)

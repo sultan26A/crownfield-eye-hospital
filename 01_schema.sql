@@ -1,6 +1,6 @@
 -- ---------------------------------------------------------------------
 -- Crownfield Eye Hospital (fictional teaching scenario)
--- 01_schema.sql — creates the 12 tables and loads the data.
+-- 01_schema.sql: creates the 12 tables and loads the data.
 --
 -- Run this one first. It drops and recreates CrownfieldEyeHospitalDB, so if you
 -- already have a database with that name, it will be deleted.
