@@ -22,7 +22,7 @@ Log in as `root` or another admin account, then run the four files in the order 
 |---|---|---|
 | 1 | `01_schema.sql` | Creates the database and all 12 tables, then loads the five Appendix 1 rows plus my synthetic test data (13 patients, 14 appointments at this point). Adds the CHECK constraints and an index, and runs the controlled UPDATE and DELETE tests. |
 | 2 | `02_individual_queries.sql` | Queries 1 to 4: GROUP BY with HAVING, a five-table INNER JOIN, a LEFT JOIN, and a nested subquery. |
-| 3 | `03_procedure_and_trigger.sql` | Queries 5 and 6: the stored procedure with an input parameter, and the past-date trigger. The trigger is created here rather than in file 01 see the assumptions below for why. Also adds one future-dated test appointment, which takes the total to 15. |
+| 3 | `03_procedure_and_trigger.sql` | Queries 5 and 6: the stored procedure with an input parameter, and the past-date trigger. The trigger is created here rather than in file 01. See the assumptions below for why. Also adds one future-dated test appointment, which takes the total to 15. |
 | 4 | `04_security.sql` | The four roles and their grants, the patient-only view, SHA-256 password hashing, a note on SQL injection, and the transaction that creates an appointment and its follow-up plan together. |
 | - | `05_ERD/` | My three ER diagrams in Crow's Foot notation: conceptual, logical and physical. |
 
@@ -52,7 +52,7 @@ Appendix 1 left a few things open, so I had to decide how to read them.
 
 ## The accounts and what they can do
 
-I checked each of these with `SHOW GRANTS` , the output is in my report.
+I checked each of these with `SHOW GRANTS`, and the output is in my report.
 
 | Account | What it can do |
 |---|---|
